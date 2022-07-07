@@ -13,7 +13,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='fixed w-full'>
+    <div className='fixed w-full z-10'>
       <button onClick={handleMenu} className='absolute top-4 right-4'>
         {menu ?
           <IoMdClose color='white' size='2.5rem' />

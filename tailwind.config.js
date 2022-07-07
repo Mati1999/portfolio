@@ -16,8 +16,8 @@ module.exports = {
       'bermuda': '#78dcca',
       'mybackground': '#1B1B1B',
       'menuColor': '#292929',
+      'buttonColor': '#00762F'
     },
-
   },
   plugins: [],
 }

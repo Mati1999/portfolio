@@ -1,9 +1,69 @@
-import React from 'react'
+import React,{ useState } from 'react'
+import proyectImg from '../static/proyectImg.jpg'
+import github from '../static/githubIcon.png'
+import deploy from '../static/deploy.png'
 
 const Proyectos = () => {
+
+    const [loadMore,setLoadMore] = useState(false);
+    const [showGithub,setShowGithub] = useState(false);
+
+    const loadMoreImages = () => {
+        setLoadMore(!loadMore);
+    }
+
+    const showGithubLink = () => setShowGithub(!showGithub);
+
     return (
-        <div id='proyectos' className='bg-mybackground w-full h-screen text-white pt-16 px-8'>
-            proyectos
+        <div id='proyectos' className='bg-mybackground w-full h-full text-white py-8 px-8 flex flex-col items-center justify-evenly' >
+            <h1 className='text-4xl'>PROYECTOS</h1>
+            <div className='relative mt-4' onClick={showGithubLink}>
+                <img src={proyectImg} alt="" className='w-56 h-56 rounded-lg' />
+                <div className={showGithub ? 'flex items-center justify-center absolute top-1/3 left-1/4' : 'hidden'}>
+                    <img src={github} alt="" className='w-14 h-14' />
+                    <img src={deploy} alt="" className='w-14 h-14' />
+                </div>
+            </div>
+            <div className='relative mt-4'>
+                <img src={proyectImg} alt="" className='w-56 h-56 rounded-lg' />
+                <div className='flex items-center justify-center absolute top-1/3 left-1/4'>
+                    <img src={github} alt="" className='w-14 h-14' />
+                    <img src={deploy} alt="" className='w-14 h-14' />
+                </div>
+            </div>
+            <div className='relative mt-4'>
+                <img src={proyectImg} alt="" className='w-56 h-56 rounded-lg' />
+                <div className='flex items-center justify-center absolute top-1/3 left-1/4'>
+                    <img src={github} alt="" className='w-14 h-14' />
+                    <img src={deploy} alt="" className='w-14 h-14' />
+                </div>
+            </div>
+            {loadMore && (
+                <>
+                    <div className='relative mt-4'>
+                        <img src={proyectImg} alt="" className='w-56 h-56 rounded-lg' />
+                        <div className='flex items-center justify-center absolute top-1/3 left-1/4'>
+                            <img src={github} alt="" className='w-14 h-14' />
+                            <img src={deploy} alt="" className='w-14 h-14' />
+                        </div>
+                    </div>
+                    <div className='relative mt-4'>
+                        <img src={proyectImg} alt="" className='w-56 h-56 rounded-lg' />
+                        <div className='flex items-center justify-center absolute top-1/3 left-1/4'>
+                            <img src={github} alt="" className='w-14 h-14' />
+                            <img src={deploy} alt="" className='w-14 h-14' />
+                        </div>
+                    </div>
+                    <div className='relative mt-4'>
+                        <img src={proyectImg} alt="" className='w-56 h-56 rounded-lg' />
+                        <div className='flex items-center justify-center absolute top-1/3 left-1/4'>
+                            <img src={github} alt="" className='w-14 h-14' />
+                            <img src={deploy} alt="" className='w-14 h-14' />
+                        </div>
+                    </div></>
+            )}
+
+            {!loadMore ? <button className='mt-4 bg-buttonColor w-40 h-12 rounded-lg text-xl text-center' onClick={loadMoreImages}>Ver mas</button> : <button className='mt-4' onClick={loadMoreImages}>Ver menos</button>}
         </div>
     )
 }

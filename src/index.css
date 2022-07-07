@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply scroll-smooth;
-  }
+    html {
+        @apply scroll-smooth;
+    }
+}
+html {
+    font-family: 'Roboto Mono', monospace;
 }
