@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      blur: {
+        sm: '3px'
+      }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
