@@ -61,7 +61,7 @@ const Proyectos = () => {
                     </div></>
             )}
 
-            {!loadMore ? <button className='mt-4 bg-buttonColor w-40 h-12 rounded-lg text-xl text-center' onClick={loadMoreImages}>Ver mas</button> : <button className='mt-4' onClick={loadMoreImages}>Ver menos</button>}
+            {!loadMore ? <button className='mt-4 bg-btnGreen w-40 h-12 rounded-lg text-xl text-center' onClick={loadMoreImages}>Ver mas</button> : <button className='mt-4 bg-btnLightGray w-40 h-12 rounded-lg text-xl text-menuColor text-center' onClick={loadMoreImages}>Ver menos</button>}
         </div>
     )
 }

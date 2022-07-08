@@ -37,7 +37,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link onClick={handleMenu} to="tecnologias" smooth={true} duration={500}>
-                  Tecnologías
+                  Tecnologias
                 </Link>
               </li>
               <li>

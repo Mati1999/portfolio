@@ -20,7 +20,8 @@ module.exports = {
       'bermuda': '#78dcca',
       'mybackground': '#1B1B1B',
       'menuColor': '#292929',
-      'buttonColor': '#00762F'
+      'btnGreen': '#00762F',
+      'btnLightGray': '#D9D9D9'
     },
   },
   plugins: [],
